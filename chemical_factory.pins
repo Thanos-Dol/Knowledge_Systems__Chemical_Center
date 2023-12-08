@@ -1,0 +1,180 @@
+; Fri Dec 08 21:18:24 EET 2023
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([chemical_factory_Class1] of  Manhole
+
+	(manhole-name "manhole_9")
+	(manhole-with-manhole
+		[chemical_factory_Class10039]
+		[chemical_factory_Class10027]
+		[chemical_factory_Class10029]
+		[chemical_factory_Class10030]))
+
+([chemical_factory_Class10004] of  Weak-Acid
+
+	(chemical-name "Acetic acid")
+	(chemical-symbol "CH3COOH"))
+
+([chemical_factory_Class10005] of  Weak-Acid
+
+	(chemical-name "Carbonic acid")
+	(chemical-symbol "H2CO3"))
+
+([chemical_factory_Class10006] of  Strong-Base
+
+	(chemical-name "Sodium hydroxide")
+	(chemical-symbol "NaOH"))
+
+([chemical_factory_Class10007] of  Weak-Base
+
+	(chemical-name "Chomogone 23"))
+
+([chemical_factory_Class10008] of  Weak-Base
+
+	(chemical-name "Aluminium Hydroxide")
+	(chemical-symbol "Al(ΟΗ)3"))
+
+([chemical_factory_Class10010] of  Weak-Base
+
+	(chemical-name "Rubidium hydroxide")
+	(chemical-symbol "RbOH"))
+
+([chemical_factory_Class10014] of  Warehouse
+
+	(connected-with-manhole [chemical_factory_Class10030])
+	(warehouse-name "Warehouse_3"))
+
+([chemical_factory_Class10016] of  Warehouse
+
+	(connected-with-manhole [chemical_factory_Class10029])
+	(warehouse-name "Warehouse_2"))
+
+([chemical_factory_Class10017] of  Warehouse
+
+	(connected-with-manhole [chemical_factory_Class10027])
+	(warehouse-name "Warehouse_1"))
+
+([chemical_factory_Class10018] of  Warehouse
+
+	(connected-with-manhole [chemical_factory_Class10031])
+	(warehouse-name "Warehouse_4"))
+
+([chemical_factory_Class10019] of  Warehouse
+
+	(connected-with-manhole [chemical_factory_Class10032])
+	(warehouse-name "Warehouse_5"))
+
+([chemical_factory_Class10020] of  Warehouse
+
+	(connected-with-manhole [chemical_factory_Class10033])
+	(warehouse-name "Warehouse_6"))
+
+([chemical_factory_Class10021] of  Warehouse
+
+	(connected-with-manhole [chemical_factory_Class10034])
+	(warehouse-name "Warehouse_7"))
+
+([chemical_factory_Class10022] of  Warehouse
+
+	(connected-with-manhole [chemical_factory_Class10035])
+	(warehouse-name "Warehouse_8"))
+
+([chemical_factory_Class10027] of  Manhole
+
+	(manhole-name "manhole_1")
+	(manhole-with-manhole [chemical_factory_Class1])
+	(manhole-with-warehouse [chemical_factory_Class10017]))
+
+([chemical_factory_Class10029] of  Manhole
+
+	(manhole-name "manhole_2")
+	(manhole-with-manhole [chemical_factory_Class1])
+	(manhole-with-warehouse [chemical_factory_Class10016]))
+
+([chemical_factory_Class10030] of  Manhole
+
+	(manhole-name "manhole_3")
+	(manhole-with-manhole
+		[chemical_factory_Class1]
+		[chemical_factory_Class1])
+	(manhole-with-warehouse [chemical_factory_Class10014]))
+
+([chemical_factory_Class10031] of  Manhole
+
+	(manhole-name "manhole_4")
+	(manhole-with-manhole [chemical_factory_Class10036])
+	(manhole-with-warehouse [chemical_factory_Class10018]))
+
+([chemical_factory_Class10032] of  Manhole
+
+	(manhole-name "manhole_5")
+	(manhole-with-manhole [chemical_factory_Class10036])
+	(manhole-with-warehouse [chemical_factory_Class10019]))
+
+([chemical_factory_Class10033] of  Manhole
+
+	(manhole-name "manhole_6")
+	(manhole-with-manhole [chemical_factory_Class10038])
+	(manhole-with-warehouse [chemical_factory_Class10020]))
+
+([chemical_factory_Class10034] of  Manhole
+
+	(manhole-name "manhole_7")
+	(manhole-with-manhole [chemical_factory_Class10038])
+	(manhole-with-warehouse [chemical_factory_Class10021]))
+
+([chemical_factory_Class10035] of  Manhole
+
+	(manhole-name "manhole_8")
+	(manhole-with-manhole [chemical_factory_Class10037])
+	(manhole-with-warehouse [chemical_factory_Class10022]))
+
+([chemical_factory_Class10036] of  Manhole
+
+	(manhole-name "manhole_10")
+	(manhole-with-manhole [chemical_factory_Class10039]))
+
+([chemical_factory_Class10037] of  Manhole
+
+	(manhole-name "manhole_13")
+	(manhole-with-manhole
+		[chemical_factory_Class10038]
+		[chemical_factory_Class10035])
+	(manhole-wth-station
+		[chemical_factory_Class10040]
+		[chemical_factory_Class10040]))
+
+([chemical_factory_Class10038] of  Manhole
+
+	(manhole-name "manhole_11")
+	(manhole-with-manhole
+		[chemical_factory_Class10037]
+		[chemical_factory_Class10033]
+		[chemical_factory_Class10034]))
+
+([chemical_factory_Class10039] of  Manhole
+
+	(manhole-name "manhole_12")
+	(manhole-with-manhole
+		[chemical_factory_Class1]
+		[chemical_factory_Class10036])
+	(manhole-wth-station [chemical_factory_Class10040]))
+
+([chemical_factory_Class10040] of  Control_station
+
+	(station-name "Station_1")
+	(station-with-manhole
+		[chemical_factory_Class10039]
+		[chemical_factory_Class10037]))
+
+([chemical_factory_Class3] of  Strong-Acid
+
+	(chemical-name "Sulfuric Acid")
+	(chemical-symbol "H2SO4"))
+
+([chemical_factory_Class5] of  Strong-Acid
+
+	(chemical-name "Hydrochloric Acid")
+	(chemical-symbol "HCl"))

@@ -1,4 +1,4 @@
-; Fri Dec 08 21:18:24 EET 2023
+; Sat Dec 09 21:31:49 EET 2023
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -12,73 +12,72 @@
 		[chemical_factory_Class10029]
 		[chemical_factory_Class10030]))
 
-([chemical_factory_Class10004] of  Weak-Acid
-
-	(chemical-name "Acetic acid")
-	(chemical-symbol "CH3COOH"))
-
-([chemical_factory_Class10005] of  Weak-Acid
-
-	(chemical-name "Carbonic acid")
-	(chemical-symbol "H2CO3"))
-
-([chemical_factory_Class10006] of  Strong-Base
-
-	(chemical-name "Sodium hydroxide")
-	(chemical-symbol "NaOH"))
-
-([chemical_factory_Class10007] of  Weak-Base
-
-	(chemical-name "Chomogone 23"))
-
-([chemical_factory_Class10008] of  Weak-Base
-
-	(chemical-name "Aluminium Hydroxide")
-	(chemical-symbol "Al(ΟΗ)3"))
-
-([chemical_factory_Class10010] of  Weak-Base
-
-	(chemical-name "Rubidium hydroxide")
-	(chemical-symbol "RbOH"))
-
 ([chemical_factory_Class10014] of  Warehouse
 
 	(connected-with-manhole [chemical_factory_Class10030])
+	(stored-chemicals
+		[chemical_factory_Class20011]
+		[chemical_factory_Class20012])
 	(warehouse-name "Warehouse_3"))
 
 ([chemical_factory_Class10016] of  Warehouse
 
 	(connected-with-manhole [chemical_factory_Class10029])
+	(stored-chemicals
+		[chemical_factory_Class20009]
+		[chemical_factory_Class20010])
 	(warehouse-name "Warehouse_2"))
 
 ([chemical_factory_Class10017] of  Warehouse
 
 	(connected-with-manhole [chemical_factory_Class10027])
+	(stored-chemicals
+		[chemical_factory_Class20007]
+		[chemical_factory_Class20008])
 	(warehouse-name "Warehouse_1"))
 
 ([chemical_factory_Class10018] of  Warehouse
 
 	(connected-with-manhole [chemical_factory_Class10031])
+	(stored-chemicals
+		[chemical_factory_Class20013]
+		[chemical_factory_Class20014]
+		[chemical_factory_Class20015])
 	(warehouse-name "Warehouse_4"))
 
 ([chemical_factory_Class10019] of  Warehouse
 
 	(connected-with-manhole [chemical_factory_Class10032])
+	(stored-chemicals
+		[chemical_factory_Class20016]
+		[chemical_factory_Class20017]
+		[chemical_factory_Class20018])
 	(warehouse-name "Warehouse_5"))
 
 ([chemical_factory_Class10020] of  Warehouse
 
 	(connected-with-manhole [chemical_factory_Class10033])
+	(stored-chemicals
+		[chemical_factory_Class20019]
+		[chemical_factory_Class20020]
+		[chemical_factory_Class20021])
 	(warehouse-name "Warehouse_6"))
 
 ([chemical_factory_Class10021] of  Warehouse
 
 	(connected-with-manhole [chemical_factory_Class10034])
+	(stored-chemicals
+		[chemical_factory_Class20022]
+		[chemical_factory_Class20023])
 	(warehouse-name "Warehouse_7"))
 
 ([chemical_factory_Class10022] of  Warehouse
 
 	(connected-with-manhole [chemical_factory_Class10035])
+	(stored-chemicals
+		[chemical_factory_Class20024]
+		[chemical_factory_Class20025]
+		[chemical_factory_Class20026])
 	(warehouse-name "Warehouse_8"))
 
 ([chemical_factory_Class10027] of  Manhole
@@ -162,19 +161,163 @@
 		[chemical_factory_Class10036])
 	(manhole-wth-station [chemical_factory_Class10040]))
 
-([chemical_factory_Class10040] of  Control_station
+([chemical_factory_Class10040] of  Control-Station
 
 	(station-name "Station_1")
 	(station-with-manhole
 		[chemical_factory_Class10039]
 		[chemical_factory_Class10037]))
 
-([chemical_factory_Class3] of  Strong-Acid
+([chemical_factory_Class20007] of  Sulfuric-Acid
 
-	(chemical-name "Sulfuric Acid")
-	(chemical-symbol "H2SO4"))
+	(chemical-name "Sulfuric Acid 1")
+	(chemical-symbol "H2SO4")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10017]))
 
-([chemical_factory_Class5] of  Strong-Acid
+([chemical_factory_Class20008] of  Petrol
 
-	(chemical-name "Hydrochloric Acid")
-	(chemical-symbol "HCl"))
+	(chemical-name "Petrol 1")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10017]))
+
+([chemical_factory_Class20009] of  Hydrocloric-Acid
+
+	(chemical-name "Hydrocloric Acid 1")
+	(chemical-symbol "HCl")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10016]))
+
+([chemical_factory_Class20010] of  Acetic-Acid
+
+	(chemical-name "Acetic Acid 1")
+	(chemical-symbol "CH3COOH")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10016]))
+
+([chemical_factory_Class20011] of  Rubidium-Hydroxide
+
+	(chemical-name "Rubidium Hydroxide 1")
+	(chemical-symbol "RbOH")
+	(radio-active TRUE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10014]))
+
+([chemical_factory_Class20012] of  Transformer-Oil
+
+	(chemical-name "Transformer Oil 1")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10014]))
+
+([chemical_factory_Class20013] of  Carbonic-Acid
+
+	(chemical-name "Carbonic Acid 1")
+	(chemical-symbol "H2CO3")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10018]))
+
+([chemical_factory_Class20014] of  Acetic-Acid
+
+	(chemical-name "Acetic Acid 2")
+	(chemical-symbol "CH3COOH")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10018]))
+
+([chemical_factory_Class20015] of  Petrol
+
+	(chemical-name "Petrol 2")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10018]))
+
+([chemical_factory_Class20016] of  Chomogone-23
+
+	(chemical-name "Chromegone 23 1")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10019]))
+
+([chemical_factory_Class20017] of  Sulfuric-Acid
+
+	(chemical-name "Sulfuric Acid 2")
+	(chemical-symbol "H2SO4")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10019]))
+
+([chemical_factory_Class20018] of  Petrol
+
+	(chemical-name "Petrol 3")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10019]))
+
+([chemical_factory_Class20019] of  Aluminium-Hydroxide
+
+	(chemical-name "Aluminium Hydroxide 1")
+	(chemical-symbol "Al(OH)3")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10020]))
+
+([chemical_factory_Class20020] of  Transformer-Oil
+
+	(chemical-name "Transformer Oil 2")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10020]))
+
+([chemical_factory_Class20021] of  Carbonic-Acid
+
+	(chemical-name "Carbonic Acid 2")
+	(chemical-symbol "H2CO3")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10020]))
+
+([chemical_factory_Class20022] of  Hydrocloric-Acid
+
+	(chemical-name "Hydrocloric Acid 2")
+	(chemical-symbol "HCl")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10021]))
+
+([chemical_factory_Class20023] of  Sulfuric-Acid
+
+	(chemical-name "Sulfuric Acid 3")
+	(chemical-symbol "H2SO4")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10021]))
+
+([chemical_factory_Class20024] of  Acetic-Acid
+
+	(chemical-name "Acetic Acid 3")
+	(chemical-symbol "CH3COOH")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10022]))
+
+([chemical_factory_Class20025] of  Carbonic-Acid
+
+	(chemical-name "Carbonic Acid 3")
+	(chemical-symbol "H2CO3")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10022]))
+
+([chemical_factory_Class20026] of  Sodium-Hydroxide
+
+	(chemical-name "Sodium Hydroxide 1")
+	(chemical-symbol "NaOH")
+	(radio-active FALSE)
+	(Specific-gravity 1.0)
+	(stored-in-warehouse [chemical_factory_Class10022]))

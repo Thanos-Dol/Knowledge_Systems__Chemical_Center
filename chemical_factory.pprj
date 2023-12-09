@@ -1,4 +1,4 @@
-; Fri Dec 08 21:18:24 EET 2023
+; Sat Dec 09 21:31:49 EET 2023
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[chemical_factory_ProjectKB_Class10204]
-		[chemical_factory_ProjectKB_Class10205]
-		[chemical_factory_ProjectKB_Class10206]
-		[chemical_factory_ProjectKB_Class10207]
-		[chemical_factory_ProjectKB_Class10208]
-		[chemical_factory_ProjectKB_Class10209]
-		[chemical_factory_ProjectKB_Class10210]
-		[chemical_factory_ProjectKB_Class10211]))
+		[chemical_factory_ProjectKB_Class10417]
+		[chemical_factory_ProjectKB_Class10418]
+		[chemical_factory_ProjectKB_Class10419]
+		[chemical_factory_ProjectKB_Class10420]
+		[chemical_factory_ProjectKB_Class10421]
+		[chemical_factory_ProjectKB_Class10422]
+		[chemical_factory_ProjectKB_Class10423]
+		[chemical_factory_ProjectKB_Class10424]))
 
 ([chemical_factory_ProjectKB_Class1] of  Widget
 
@@ -42,56 +42,112 @@
 
 	(name "SearchTab_Query"))
 
-([chemical_factory_ProjectKB_Class10182] of  Widget
+([chemical_factory_ProjectKB_Class10196] of  Widget
 
 	(height 60)
 	(is_hidden FALSE)
-	(name "manhole-with-warehouse")
-	(property_list [chemical_factory_ProjectKB_Class10183])
+	(name "stored-in-warehouse")
+	(property_list [chemical_factory_ProjectKB_Class10197])
 	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
 	(width 200)
 	(x 0)
-	(y 360))
+	(y 120))
 
-([chemical_factory_ProjectKB_Class10183] of  Property_List
+([chemical_factory_ProjectKB_Class10197] of  Property_List
 )
 
-([chemical_factory_ProjectKB_Class10204] of  String
+([chemical_factory_ProjectKB_Class10198] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "stored-in-warehouse")
+	(property_list [chemical_factory_ProjectKB_Class10199])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([chemical_factory_ProjectKB_Class10199] of  Property_List
+)
+
+([chemical_factory_ProjectKB_Class10200] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "stored-in-warehouse")
+	(property_list [chemical_factory_ProjectKB_Class10201])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([chemical_factory_ProjectKB_Class10201] of  Property_List
+)
+
+([chemical_factory_ProjectKB_Class10202] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "stored-in-warehouse")
+	(property_list [chemical_factory_ProjectKB_Class10203])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([chemical_factory_ProjectKB_Class10203] of  Property_List
+)
+
+([chemical_factory_ProjectKB_Class10204] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "stored-in-warehouse")
+	(property_list [chemical_factory_ProjectKB_Class10205])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([chemical_factory_ProjectKB_Class10205] of  Property_List
+)
+
+([chemical_factory_ProjectKB_Class10417] of  String
 
 	(name "Manhole")
 	(string_value "manhole-name"))
 
-([chemical_factory_ProjectKB_Class10205] of  String
+([chemical_factory_ProjectKB_Class10418] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([chemical_factory_ProjectKB_Class10206] of  String
+([chemical_factory_ProjectKB_Class10419] of  String
 
-	(name "Control_station")
+	(name "Control-Station")
 	(string_value "station-name"))
 
-([chemical_factory_ProjectKB_Class10207] of  String
+([chemical_factory_ProjectKB_Class10420] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([chemical_factory_ProjectKB_Class10208] of  String
+([chemical_factory_ProjectKB_Class10421] of  String
 
 	(name "Acid")
 	(string_value "chemical-name"))
 
-([chemical_factory_ProjectKB_Class10209] of  String
+([chemical_factory_ProjectKB_Class10422] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([chemical_factory_ProjectKB_Class10210] of  String
+([chemical_factory_ProjectKB_Class10423] of  String
 
 	(name "Warehouse")
 	(string_value "warehouse-name"))
 
-([chemical_factory_ProjectKB_Class10211] of  String
+([chemical_factory_ProjectKB_Class10424] of  String
 
 	(name "Chemical")
 	(string_value "chemical-name"))
@@ -414,33 +470,6 @@
 ([chemical_factory_ProjectKB_Class8] of  Property_List
 )
 
-([chemical_factory_ProjectKB_Class84] of  Widget
-
-	(height 60)
-	(is_hidden FALSE)
-	(name "manhole-wth-station")
-	(property_list [chemical_factory_ProjectKB_Class85])
-	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
-	(width 200)
-	(x 0)
-	(y 60))
-
-([chemical_factory_ProjectKB_Class85] of  Property_List
-
-	(properties
-		[chemical_factory_ProjectKB_Class86]
-		[chemical_factory_ProjectKB_Class87]))
-
-([chemical_factory_ProjectKB_Class86] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-View References to Value"))
-
-([chemical_factory_ProjectKB_Class87] of  Boolean
-
-	(boolean_value FALSE)
-	(name "ButtonDisplayed-Delete Instance"))
-
 ([chemical_factory_ProjectKB_Class9] of  Widget
 
 	(is_hidden TRUE)
@@ -485,6 +514,9 @@
 ([INSTANCES_TAB] of  Widget
 
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
+
+([KB_084086_Class0] of  Map
+)
 
 ([KB_398566_Class0] of  String
 
@@ -586,9 +618,6 @@
 	(name "classes_file_name")
 	(string_value "chemical_factory.pont"))
 
-([KB_519149_Class0] of  Map
-)
-
 ([LAYOUT_PROPERTIES] of  Property_List
 
 	(name "layout properties")
@@ -671,9 +700,9 @@
 
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
-		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[STANDARD_CLASS_FORM_WIDGET]
 		[STANDARD_SLOT_FORM_WIDGET]
+		[INSTANCE_ANNOTATION_FORM_WIDGET]
 		[STANDARD_FACET_FORM_WIDGET]
 		[PAL_FORM_WIDGET])
 	(default_cls_metaclass ":STANDARD-CLASS")

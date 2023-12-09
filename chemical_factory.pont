@@ -1,4 +1,4 @@
-; Fri Dec 08 21:18:24 EET 2023
+; Sat Dec 09 21:31:49 EET 2023
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,11 +11,6 @@
 		(type FLOAT)
 		(range 0.0 14.0)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(multislot manhole-with-manhole
-		(type INSTANCE)
-;+		(allowed-classes Manhole)
-;+		(inverse-slot manhole-with-manhole)
 		(create-accessor read-write))
 	(single-slot warehouse-name
 		(type STRING)
@@ -30,7 +25,7 @@
 		(create-accessor read-write))
 	(multislot manhole-wth-station
 		(type INSTANCE)
-;+		(allowed-classes Control_station)
+;+		(allowed-classes Control-Station)
 ;+		(inverse-slot station-with-manhole)
 		(create-accessor read-write))
 	(single-slot chemical-name
@@ -40,6 +35,11 @@
 	(single-slot chemical-symbol
 		(type STRING)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot stored-chemicals
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
+;+		(inverse-slot stored-in-warehouse)
 		(create-accessor read-write))
 	(single-slot Specific-gravity
 		(type FLOAT)
@@ -51,6 +51,17 @@
 ;+		(allowed-classes Manhole)
 ;+		(cardinality 0 1)
 ;+		(inverse-slot manhole-with-warehouse)
+		(create-accessor read-write))
+	(multislot manhole-with-manhole
+		(type INSTANCE)
+;+		(allowed-classes Manhole)
+;+		(inverse-slot manhole-with-manhole)
+		(create-accessor read-write))
+	(single-slot stored-in-warehouse
+		(type INSTANCE)
+;+		(allowed-classes Warehouse)
+;+		(cardinality 0 1)
+;+		(inverse-slot stored-chemicals)
 		(create-accessor read-write))
 	(single-slot station-name
 		(type STRING)
@@ -93,6 +104,11 @@
 		(default 1.0)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot stored-in-warehouse
+		(type INSTANCE)
+;+		(allowed-classes Warehouse)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot radio-active
 ;+		(comment "Για όσα στοιχεία δεν έχουν σαφώς καθοριστεί αν είναι ραδιενεργά τότε θεωρούνται μη ραδιενεργά.")
 		(type SYMBOL)
@@ -108,6 +124,24 @@
 		(type FLOAT)
 		(range 6.0 8.0)
 ;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Petrol
+	(is-a Oil)
+	(role concrete)
+	(single-slot chemical-name
+		(type STRING)
+		(default "Petrol")
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Transformer-Oil
+	(is-a Oil)
+	(role concrete)
+	(single-slot chemical-name
+		(type STRING)
+		(default "Transformer Oil")
+;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
 (defclass Base
@@ -128,12 +162,70 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
+(defclass Sodium-Hydroxide
+	(is-a Strong-Base)
+	(role concrete)
+	(single-slot chemical-name
+		(type STRING)
+		(default "Sodium Hydroxide")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot chemical-symbol
+		(type STRING)
+		(default "NaOH")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
 (defclass Weak-Base
 	(is-a Base)
 	(role concrete)
 	(single-slot pH
 		(type FLOAT)
 		(range 8.0 11.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Aluminium-Hydroxide
+	(is-a Weak-Base)
+	(role concrete)
+	(single-slot chemical-name
+		(type STRING)
+		(default "Aluminium Hydroxide")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot chemical-symbol
+		(type STRING)
+		(default "Al(OH)3")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Chomogone-23
+	(is-a Weak-Base)
+	(role concrete)
+	(single-slot chemical-name
+		(type STRING)
+		(default "Chromegone 23")
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Rubidium-Hydroxide
+	(is-a Weak-Base)
+	(role concrete)
+	(single-slot chemical-name
+		(type STRING)
+		(default "Rubidium Hydroxide")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot chemical-symbol
+		(type STRING)
+		(default "RbOH")
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot radio-active
+;+		(comment "Για όσα στοιχεία δεν έχουν σαφώς καθοριστεί αν είναι ραδιενεργά τότε θεωρούνται μη ραδιενεργά.")
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default TRUE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -155,9 +247,33 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
-(defclass chemical_factory_Class10013
+(defclass Hydrocloric-Acid
 	(is-a Strong-Acid)
-	(role concrete))
+	(role concrete)
+	(single-slot chemical-name
+		(type STRING)
+		(default "Hydrocloric Acid")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot chemical-symbol
+		(type STRING)
+		(default "HCl")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Sulfuric-Acid
+	(is-a Strong-Acid)
+	(role concrete)
+	(single-slot chemical-name
+		(type STRING)
+		(default "Sulfuric Acid")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot chemical-symbol
+		(type STRING)
+		(default "H2SO4")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
 
 (defclass Weak-Acid
 	(is-a Acid)
@@ -168,6 +284,34 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
+(defclass Acetic-Acid
+	(is-a Weak-Acid)
+	(role concrete)
+	(single-slot chemical-name
+		(type STRING)
+		(default "Acetic Acid")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot chemical-symbol
+		(type STRING)
+		(default "CH3COOH")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Carbonic-Acid
+	(is-a Weak-Acid)
+	(role concrete)
+	(single-slot chemical-name
+		(type STRING)
+		(default "Carbonic Acid")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot chemical-symbol
+		(type STRING)
+		(default "H2CO3")
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
 (defclass Warehouse
 	(is-a USER)
 	(role concrete)
@@ -175,6 +319,10 @@
 		(type INSTANCE)
 ;+		(allowed-classes Manhole)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot stored-chemicals
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
 		(create-accessor read-write))
 	(single-slot warehouse-name
 		(type STRING)
@@ -194,7 +342,7 @@
 		(create-accessor read-write))
 	(multislot manhole-wth-station
 		(type INSTANCE)
-;+		(allowed-classes Control_station)
+;+		(allowed-classes Control-Station)
 		(create-accessor read-write))
 	(single-slot manhole-with-warehouse
 		(type INSTANCE)
@@ -202,7 +350,7 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
-(defclass Control_station
+(defclass Control-Station
 	(is-a USER)
 	(role concrete)
 	(single-slot station-name
